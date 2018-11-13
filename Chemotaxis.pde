@@ -1,19 +1,28 @@
-Bacteria wick;
-Bacteria free;
+Bacteria[] wick;
+Bacteria[] free;
 void setup()   
  {     
   size(1000,1000);
-  frameRate(10);
+  frameRate(100);
+  wick = new Bacteria[1000];
+  for(int i = 0; i < wick.length; i++) {
+    wick[i] = new Bacteria();
+  }
+  free = new Bacteria[1000];
+  for(int i = 0; i < free.length; i++) {
+    free[i] = new Bacteria();
+  }
  }   
  
-void draw()   
- { 
-   wick = new Bacteria();
-   free = new Bacteria();
-   wick.move();
-   wick.show();
-   free.move();
-   free.show();
+void draw()  { 
+  for(int i = 0; i < wick.length; i++) {
+    wick[i].show();
+    wick[i].move();
+  }
+  for(int i = 0; i < free.length; i++) {
+    free[i].show();
+    free[i].move();
+  }
  }  
  
 class Bacteria  {   
@@ -28,7 +37,7 @@ class Bacteria  {
     }
     
     void move() {
-      myX = myY = (int)(Math.random()*50);
+      myX = myY + (int)(Math.random()*50);
       myY = myX + (int)(Math.random()*50);
     }
  }
