@@ -14,10 +14,10 @@ void setup()
   }
  }   
  
-void draw()  { 
-  for(int i = 0; i < wick.length; i++) {
-    wick[i].rocket();
-    wick[i].fly();
+  void draw()  { 
+   for(int i = 0; i < wick.length; i++) {
+     wick[i].move();
+     wick[i].show();
   }
   for(int i = 0; i < free.length; i++) {
     free[i].show();
@@ -26,27 +26,20 @@ void draw()  {
  }  
  
 class Bacteria  {   
-   int myX,myY,x,y;
+   int myX,myY;
     Bacteria() {
-      myX = 0;
-      myY = 0;
+      myX = 0+myY;
+      myY = 0+myX;
     }
     
     void show() {
-      ellipse(myX,myY,50,50);
-    }
-    
-    void rocket() {
-      ellipse(myX,myY,100,50);
+      fill(255,0,0);
+      ellipse(myX+(int)(Math.random()),myY,50,50);
+      
     }
     
     void move() {
-      myX = myY + (int)(Math.random()*50);
-      myY = myX + (int)(Math.random()*50);
+      myX = mouseX + (int)(Math.random()*90);
+      myY = mouseY + (int)(Math.random()*90);
     }
-    
-    void fly() {
-      myX = myY + (int)(Math.random()*60);
-      myY = myX + (int)(Math.random()*50);
-    }
- }
+}
