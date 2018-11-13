@@ -33,7 +33,7 @@ class Bacteria  {
     }
     
     void show() {
-      fill(255,0,0);
+      fill(0+(int)(Math.random()*1000));
       ellipse(myX+(int)(Math.random()),myY,50,50);
       
     }
