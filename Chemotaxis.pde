@@ -42,4 +42,4 @@ class Bacteria  {
       myX = mouseX + (int)(Math.random()*90);
       myY = mouseY + (int)(Math.random()*90);
     }
-}
+} 
