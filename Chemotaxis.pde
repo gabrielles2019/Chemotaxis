@@ -1,5 +1,5 @@
 /* Chemotaxis by Gabby S.
- * It's not suppose to be anything, it just looks cool
+ * It's not suppose to be anything, it just looks cool.
  */
 
 
