@@ -1,3 +1,8 @@
+/* Chemotaxis by Gabby S.
+ * It's not suppose to be anything, it just looks cool
+ */
+
+
 Bacteria[] wick;
 Bacteria[] free;
 void setup()   
